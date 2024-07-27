@@ -21,9 +21,8 @@ class Rover {
       this.position = message.commands[i].value;
      } else if (message.commands[i].commandType === "MOVE" && this.mode === "LOW_POWER") {
       response.results.push({completed: false});
-     } else {
-      response.results.push({completed: true})
      }
+     
    }
       return response;
    }
